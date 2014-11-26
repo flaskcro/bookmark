@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}장고 북마크에 오신것을 환영합니다.{% endblock %}
+{% block head %}장고 북마크에 오신것을 환영합니다.{% endblock %}
+{% block content %}
+    {% if user.username %}
+        <p>Welcome {{  user.username  }}!</p>
+        Here you can store and share bookmarks!</p>
+    {%  else  %}
+    <p>Welcome anonymous user!
+    You need to <a href="login/">login</a>
+    before you can store and share bookmarks.</p>
+    {%  endif %}
+{% endblock %}
